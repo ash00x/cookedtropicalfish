@@ -1,4 +1,4 @@
-# Fabric Cum Mod
+# Fabric Feesh Mod
 
 ## Setup
 
