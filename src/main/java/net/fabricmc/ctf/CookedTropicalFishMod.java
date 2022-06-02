@@ -16,6 +16,7 @@ public class CookedTropicalFishMod implements ModInitializer {
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger("Cooked Tropical Fish");
+
 	public static final Item COOKED_TROPICAL_FISH = new Item(
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
 					new FoodComponent.Builder().hunger(5).saturationModifier(0.6F).build()));
@@ -23,11 +24,16 @@ public class CookedTropicalFishMod implements ModInitializer {
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
 					new FoodComponent.Builder().hunger(3).saturationModifier(0.6F).build()));
 	public static final Item SWEET_BERRY_JAM = new DrinkItem(
-		new FabricItemSettings().group(ItemGroup.FOOD).food(
-				new FoodComponent.Builder().hunger(5).saturationModifier(1.2F).build()));
+			new FabricItemSettings().group(ItemGroup.FOOD).food(
+					new FoodComponent.Builder().hunger(5).saturationModifier(1.2F).build()).maxCount(16));
+
+	public static final Item TOAST = new Item(
+			new FabricItemSettings().group(ItemGroup.FOOD).food(
+					new FoodComponent.Builder().hunger(5).saturationModifier(1.2F).build()));
+
 	public static final Item JAM_ON_TOAST = new Item(
-		new FabricItemSettings().group(ItemGroup.FOOD).food(
-				new FoodComponent.Builder().hunger(8).saturationModifier(1.8F).build()));
+			new FabricItemSettings().group(ItemGroup.FOOD).food(
+					new FoodComponent.Builder().hunger(8).saturationModifier(1.8F).build()));
 
 	@Override
 	public void onInitialize() {
@@ -39,6 +45,7 @@ public class CookedTropicalFishMod implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("ctf", "cooked_tropical_fish"), COOKED_TROPICAL_FISH);
 		Registry.register(Registry.ITEM, new Identifier("ctf", "roasted_sweet_berries"), ROASTED_SWEET_BERRIES);
 		Registry.register(Registry.ITEM, new Identifier("ctf", "sweet_berry_jam"), SWEET_BERRY_JAM);
+		Registry.register(Registry.ITEM, new Identifier("ctf", "toast"), TOAST);
 		Registry.register(Registry.ITEM, new Identifier("ctf", "jam_on_toast"), JAM_ON_TOAST);
 	}
 }

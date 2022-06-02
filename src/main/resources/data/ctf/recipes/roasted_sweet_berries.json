@@ -1,9 +1,9 @@
 {
     "type": "minecraft:smelting",
     "ingredient": {
-        "item": "minecraft:tropical_fish"
+        "item": "minecraft:sweet_berries"
     },
-    "result": "ctf:cooked_tropical_fish",
+    "result": "ctf:roasted_sweet_berries",
     "experience": 0.35,
     "cookingtime": 200
 }

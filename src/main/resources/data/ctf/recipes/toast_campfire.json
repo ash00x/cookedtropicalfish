@@ -1,9 +1,9 @@
 {
     "type": "minecraft:campfire_cooking",
     "ingredient": {
-        "item": "minecraft:tropical_fish"
+        "item": "minecraft:bread"
     },
-    "result": "ctf:cooked_tropical_fish",
+    "result": "ctf:toast",
     "experience": 0.35,
     "cookingtime": 600
 }
