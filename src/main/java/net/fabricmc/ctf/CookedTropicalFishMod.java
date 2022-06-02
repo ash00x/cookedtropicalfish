@@ -15,12 +15,19 @@ public class CookedTropicalFishMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
+	public static final Logger LOGGER = LoggerFactory.getLogger("Cooked Tropical Fish");
 	public static final Item COOKED_TROPICAL_FISH = new Item(
+			new FabricItemSettings().group(ItemGroup.FOOD).food(
+					new FoodComponent.Builder().hunger(5).saturationModifier(0.6F).build()));
+	public static final Item ROASTED_SWEET_BERRIES = new Item(
+			new FabricItemSettings().group(ItemGroup.FOOD).food(
+					new FoodComponent.Builder().hunger(3).saturationModifier(0.6F).build()));
+	public static final Item SWEET_BERRY_JAM = new DrinkItem(
 		new FabricItemSettings().group(ItemGroup.FOOD).food(
-			new FoodComponent.Builder().hunger(5).saturationModifier(0.6F).build()
-			)
-		);
+				new FoodComponent.Builder().hunger(5).saturationModifier(1.2F).build()));
+	public static final Item JAM_ON_TOAST = new Item(
+		new FabricItemSettings().group(ItemGroup.FOOD).food(
+				new FoodComponent.Builder().hunger(8).saturationModifier(1.8F).build()));
 
 	@Override
 	public void onInitialize() {
@@ -28,7 +35,10 @@ public class CookedTropicalFishMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Nice cock.");
+		LOGGER.info("Warning. Warning. Cum Mode Initialized.");
 		Registry.register(Registry.ITEM, new Identifier("ctf", "cooked_tropical_fish"), COOKED_TROPICAL_FISH);
+		Registry.register(Registry.ITEM, new Identifier("ctf", "roasted_sweet_berries"), ROASTED_SWEET_BERRIES);
+		Registry.register(Registry.ITEM, new Identifier("ctf", "sweet_berry_jam"), SWEET_BERRY_JAM);
+		Registry.register(Registry.ITEM, new Identifier("ctf", "jam_on_toast"), JAM_ON_TOAST);
 	}
 }
