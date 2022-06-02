@@ -2,6 +2,11 @@
     "item.ctf.cooked_tropical_fish": "Cooked Tropical Fish",
     "item.ctf.roasted_sweet_berries": "Roasted Sweet Berries",
     "item.ctf.sweet_berry_jam": "Sweet Berry Jam",
-    "item.ctf.jam_on_toast": "Jam on Toast",
-    "item.ctf.toast": "Toast"
+    "item.ctf.sweet_berry_toast": "Sweet Berry Toast",
+    "item.ctf.half_sweet_berry_toast": "Half-eaten Sweet Berry Toast",
+    "item.ctf.toast": "Toast",
+    "item.ctf.roasted_glow_berries": "Roasted Glow Berries",
+    "item.ctf.glow_berry_jam": "Glow Berry Jam",
+    "item.ctf.glow_berry_toast": "Glow Berry Toast",
+    "item.ctf.half_glow_berry_toast": "Half-eaten Glow Berry Toast"
 }

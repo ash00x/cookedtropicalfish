@@ -20,20 +20,44 @@ public class CookedTropicalFishMod implements ModInitializer {
 	public static final Item COOKED_TROPICAL_FISH = new Item(
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
 					new FoodComponent.Builder().hunger(5).saturationModifier(0.6F).build()));
+
 	public static final Item ROASTED_SWEET_BERRIES = new Item(
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
-					new FoodComponent.Builder().hunger(3).saturationModifier(0.6F).build()));
+					new FoodComponent.Builder().hunger(3).saturationModifier(0.4F).build()));
+
 	public static final Item SWEET_BERRY_JAM = new DrinkItem(
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
-					new FoodComponent.Builder().hunger(5).saturationModifier(1.2F).build()).maxCount(16));
+					new FoodComponent.Builder().hunger(3).saturationModifier(0.8F).build()).maxCount(16));
 
 	public static final Item TOAST = new Item(
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
 					new FoodComponent.Builder().hunger(5).saturationModifier(1.2F).build()));
 
-	public static final Item JAM_ON_TOAST = new Item(
+	public static final Item HALF_SWEET_BERRY_TOAST = new Item(
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
-					new FoodComponent.Builder().hunger(8).saturationModifier(1.8F).build()));
+					new FoodComponent.Builder().snack().hunger(6).saturationModifier(1.4F).build()).maxCount(1));
+
+	public static final Item SWEET_BERRY_TOAST = new ToastItem(
+			new FabricItemSettings().group(ItemGroup.FOOD).food(
+					new FoodComponent.Builder().snack().hunger(6).saturationModifier(1.4F).build()).maxCount(1),
+			HALF_SWEET_BERRY_TOAST);
+
+	public static final Item ROASTED_GLOW_BERRIES = new Item(
+			new FabricItemSettings().group(ItemGroup.FOOD).food(
+					new FoodComponent.Builder().hunger(3).saturationModifier(0.4F).build()));
+
+	public static final Item GLOW_BERRY_JAM = new DrinkItem(
+			new FabricItemSettings().group(ItemGroup.FOOD).food(
+					new FoodComponent.Builder().hunger(3).saturationModifier(0.8F).build()).maxCount(16));
+
+	public static final Item HALF_GLOW_BERRY_TOAST = new Item(
+			new FabricItemSettings().group(ItemGroup.FOOD).food(
+					new FoodComponent.Builder().snack().hunger(6).saturationModifier(1.4F).build()).maxCount(1));
+
+	public static final Item GLOW_BERRY_TOAST = new ToastItem(
+			new FabricItemSettings().group(ItemGroup.FOOD).food(
+					new FoodComponent.Builder().snack().hunger(6).saturationModifier(1.4F).build()).maxCount(1),
+			HALF_GLOW_BERRY_TOAST);
 
 	@Override
 	public void onInitialize() {
@@ -41,11 +65,17 @@ public class CookedTropicalFishMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Warning. Warning. Cum Mode Initialized.");
+		LOGGER.info("Warning!!!! Warning!!!! Cum Mode Initialized!!!!!!!!");
 		Registry.register(Registry.ITEM, new Identifier("ctf", "cooked_tropical_fish"), COOKED_TROPICAL_FISH);
 		Registry.register(Registry.ITEM, new Identifier("ctf", "roasted_sweet_berries"), ROASTED_SWEET_BERRIES);
 		Registry.register(Registry.ITEM, new Identifier("ctf", "sweet_berry_jam"), SWEET_BERRY_JAM);
 		Registry.register(Registry.ITEM, new Identifier("ctf", "toast"), TOAST);
-		Registry.register(Registry.ITEM, new Identifier("ctf", "jam_on_toast"), JAM_ON_TOAST);
+		Registry.register(Registry.ITEM, new Identifier("ctf", "sweet_berry_toast"), SWEET_BERRY_TOAST);
+		Registry.register(Registry.ITEM, new Identifier("ctf", "half_sweet_berry_toast"), HALF_SWEET_BERRY_TOAST);
+
+		Registry.register(Registry.ITEM, new Identifier("ctf", "roasted_glow_berries"), ROASTED_GLOW_BERRIES);
+		Registry.register(Registry.ITEM, new Identifier("ctf", "glow_berry_jam"), GLOW_BERRY_JAM);
+		Registry.register(Registry.ITEM, new Identifier("ctf", "glow_berry_toast"), GLOW_BERRY_TOAST);
+		Registry.register(Registry.ITEM, new Identifier("ctf", "half_glow_berry_toast"), HALF_GLOW_BERRY_TOAST);
 	}
 }
