@@ -27,11 +27,11 @@ public class CookedTropicalFishMod implements ModInitializer {
 
 	public static final Item SWEET_BERRY_JAM = new DrinkItem(
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
-					new FoodComponent.Builder().hunger(3).saturationModifier(0.8F).build()).maxCount(16));
+					new FoodComponent.Builder().hunger(3).saturationModifier(1F).build()).maxCount(16));
 
 	public static final Item TOAST = new Item(
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
-					new FoodComponent.Builder().hunger(5).saturationModifier(1.2F).build()));
+					new FoodComponent.Builder().hunger(5).saturationModifier(0.6F).build()));
 
 	public static final Item HALF_SWEET_BERRY_TOAST = new Item(
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
@@ -48,7 +48,7 @@ public class CookedTropicalFishMod implements ModInitializer {
 
 	public static final Item GLOW_BERRY_JAM = new DrinkItem(
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
-					new FoodComponent.Builder().hunger(3).saturationModifier(0.8F).build()).maxCount(16));
+					new FoodComponent.Builder().hunger(3).saturationModifier(1F).build()).maxCount(16));
 
 	public static final Item HALF_GLOW_BERRY_TOAST = new Item(
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
