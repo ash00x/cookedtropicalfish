@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:smoking",
-    "ingredient": {
-        "item": "minecraft:glow_berries"
-    },
-    "result": "ctf:roasted_glow_berries",
-    "experience": 0.35,
-    "cookingtime": 100
-}
