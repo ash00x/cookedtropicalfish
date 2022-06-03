@@ -65,13 +65,10 @@ public class CookedTropicalFishMod implements ModInitializer {
 
 	public static final Item BAKED_APPLE = new Item(
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
-					new FoodComponent.Builder().hunger(5).saturationModifier(0.4F).build()));
+					new FoodComponent.Builder().hunger(5).saturationModifier(0.6F).build()));
 	public static final Item APPLE_PIE = new Item(
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
-						new FoodComponent.Builder().hunger(3).saturationModifier(0.4F).build()));
-
-	
-
+					new FoodComponent.Builder().hunger(8).saturationModifier(0.6F).build()));
 
 	@Override
 	public void onInitialize() {

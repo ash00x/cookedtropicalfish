@@ -8,6 +8,7 @@ import net.minecraft.world.World;
 
 public class ToastItem extends Item {
     private Item halfEatenItem;
+
     public ToastItem(Settings settings, Item halfEatenItem) {
         super(settings);
         this.halfEatenItem = halfEatenItem;
@@ -19,8 +20,8 @@ public class ToastItem extends Item {
         super.finishUsing(stack, world, user);
         if (user instanceof PlayerEntity && ((PlayerEntity) user).getAbilities().creativeMode) { // if in creative mode
             return stack;
-        }
-        else return new ItemStack(halfEatenItem);
+        } else
+            return new ItemStack(halfEatenItem);
     }
-    
+
 }
