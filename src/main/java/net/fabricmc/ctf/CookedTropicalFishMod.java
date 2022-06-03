@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -26,7 +27,7 @@ public class CookedTropicalFishMod implements ModInitializer {
 					new FoodComponent.Builder().hunger(3).saturationModifier(0.4F).build()));
 
 	public static final Item SWEET_BERRY_JAM = new DrinkItem(
-			new FabricItemSettings().group(ItemGroup.FOOD).food(
+			new FabricItemSettings().group(ItemGroup.FOOD).recipeRemainder(Items.GLASS_BOTTLE).food(
 					new FoodComponent.Builder().hunger(3).saturationModifier(1F).build()).maxCount(16));
 
 	public static final Item TOAST = new Item(
@@ -47,7 +48,7 @@ public class CookedTropicalFishMod implements ModInitializer {
 					new FoodComponent.Builder().hunger(3).saturationModifier(0.4F).build()));
 
 	public static final Item GLOW_BERRY_JAM = new DrinkItem(
-			new FabricItemSettings().group(ItemGroup.FOOD).food(
+			new FabricItemSettings().group(ItemGroup.FOOD).recipeRemainder(Items.GLASS_BOTTLE).food(
 					new FoodComponent.Builder().hunger(3).saturationModifier(1F).build()).maxCount(16));
 
 	public static final Item HALF_GLOW_BERRY_TOAST = new Item(
