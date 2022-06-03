@@ -59,6 +59,20 @@ public class CookedTropicalFishMod implements ModInitializer {
 					new FoodComponent.Builder().snack().hunger(6).saturationModifier(1.4F).build()).maxCount(1),
 			HALF_GLOW_BERRY_TOAST);
 
+	public static final Item APPLE_SAUCE = new DrinkItem(
+			new FabricItemSettings().group(ItemGroup.FOOD).food(
+					new FoodComponent.Builder().hunger(3).saturationModifier(1F).build()).maxCount(16));
+
+	public static final Item BAKED_APPLE = new Item(
+			new FabricItemSettings().group(ItemGroup.FOOD).food(
+					new FoodComponent.Builder().hunger(5).saturationModifier(0.4F).build()));
+	public static final Item APPLE_PIE = new Item(
+			new FabricItemSettings().group(ItemGroup.FOOD).food(
+						new FoodComponent.Builder().hunger(3).saturationModifier(0.4F).build()));
+
+	
+
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -67,6 +81,7 @@ public class CookedTropicalFishMod implements ModInitializer {
 
 		LOGGER.info("Warning!!!! Warning!!!! Cum Mode Initialized!!!!!!!!");
 		Registry.register(Registry.ITEM, new Identifier("ctf", "cooked_tropical_fish"), COOKED_TROPICAL_FISH);
+
 		Registry.register(Registry.ITEM, new Identifier("ctf", "roasted_sweet_berries"), ROASTED_SWEET_BERRIES);
 		Registry.register(Registry.ITEM, new Identifier("ctf", "sweet_berry_jam"), SWEET_BERRY_JAM);
 		Registry.register(Registry.ITEM, new Identifier("ctf", "toast"), TOAST);
@@ -77,5 +92,9 @@ public class CookedTropicalFishMod implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("ctf", "glow_berry_jam"), GLOW_BERRY_JAM);
 		Registry.register(Registry.ITEM, new Identifier("ctf", "glow_berry_toast"), GLOW_BERRY_TOAST);
 		Registry.register(Registry.ITEM, new Identifier("ctf", "half_glow_berry_toast"), HALF_GLOW_BERRY_TOAST);
+
+		Registry.register(Registry.ITEM, new Identifier("ctf", "baked_apple"), BAKED_APPLE);
+		Registry.register(Registry.ITEM, new Identifier("ctf", "apple_sauce"), APPLE_SAUCE);
+		Registry.register(Registry.ITEM, new Identifier("ctf", "apple_pie"), APPLE_PIE);
 	}
 }
