@@ -23,5 +23,8 @@
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"
-  }
+  },
+  "mixins": [
+    "ctf.mixins.json"
+  ]
 }

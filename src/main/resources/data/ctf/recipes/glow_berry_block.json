@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:honey_bottle"
+        }
+    },
+    "result": {
+        "item": "ctf:glow_berry_block",
+        "count": 1
+    }
+}

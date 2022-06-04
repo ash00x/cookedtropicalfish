@@ -1,11 +1,20 @@
 package net.fabricmc.ctf;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Block;
+import net.minecraft.block.HoneyBlock;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.Material;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -71,6 +80,9 @@ public class CookedTropicalFishMod implements ModInitializer {
 			new FabricItemSettings().group(ItemGroup.FOOD).food(
 					new FoodComponent.Builder().hunger(8).saturationModifier(0.6F).build()));
 
+	public static final Block GLOW_BERRY_BLOCK = new JamBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT, MapColor.ORANGE).velocityMultiplier(0.4f)
+					.jumpVelocityMultiplier(0.5f).nonOpaque().sounds(BlockSoundGroup.HONEY));
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -94,5 +106,9 @@ public class CookedTropicalFishMod implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("ctf", "baked_apple"), BAKED_APPLE);
 		Registry.register(Registry.ITEM, new Identifier("ctf", "apple_sauce"), APPLE_SAUCE);
 		Registry.register(Registry.ITEM, new Identifier("ctf", "apple_pie"), APPLE_PIE);
+
+		Registry.register(Registry.BLOCK, new Identifier("ctf", "glow_berry_block"), GLOW_BERRY_BLOCK);
+		Registry.register(Registry.ITEM, new Identifier("ctf", "glow_berry_block"), new BlockItem(GLOW_BERRY_BLOCK, new FabricItemSettings().group(ItemGroup.REDSTONE)));
+		BlockRenderLayerMap.INSTANCE.putBlock(GLOW_BERRY_BLOCK, RenderLayer.getTranslucent());
 	}
 }

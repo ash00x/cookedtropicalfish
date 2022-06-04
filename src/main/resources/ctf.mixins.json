@@ -1,0 +1,16 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "net.fabricmc.ctf.mixin",
+    "compatibilityLevel": "JAVA_8",
+    "mixins": [],
+    "client": [
+        "JamBlockMixin"
+    ],
+    "server": [
+        "JamBlockMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
