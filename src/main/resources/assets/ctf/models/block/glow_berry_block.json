@@ -1,9 +1,9 @@
 {   "parent": "block/block",
     "textures": {
-        "particle": "ctf:block/glow_berry_block_top",
-        "down": "ctf:block/glow_berry_block_bottom",
-        "up": "ctf:block/glow_berry_block_top",
-        "side": "ctf:block/glow_berry_block_side"
+        "particle": "ctf:block/glow_berry_block",
+        "down": "ctf:block/glow_berry_block",
+        "up": "ctf:block/glow_berry_block",
+        "side": "ctf:block/glow_berry_block"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],

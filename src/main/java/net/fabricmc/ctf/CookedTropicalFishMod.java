@@ -81,7 +81,7 @@ public class CookedTropicalFishMod implements ModInitializer {
 					new FoodComponent.Builder().hunger(8).saturationModifier(0.6F).build()));
 
 	public static final Block GLOW_BERRY_BLOCK = new JamBlock(FabricBlockSettings.of(Material.ORGANIC_PRODUCT, MapColor.ORANGE).velocityMultiplier(0.4f)
-					.jumpVelocityMultiplier(0.5f).nonOpaque().sounds(BlockSoundGroup.HONEY));
+					.jumpVelocityMultiplier(0.5f).nonOpaque().sounds(BlockSoundGroup.HONEY).luminance(state -> 15));
 
 	@Override
 	public void onInitialize() {
