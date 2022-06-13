@@ -16,6 +16,9 @@
   "entrypoints": {
     "main": [
       "net.fabricmc.ctf.CookedTropicalFishMod"
+    ],
+    "client": [
+      "net.fabricmc.ctf.ClientOnly"
     ]
   },
   "depends": {

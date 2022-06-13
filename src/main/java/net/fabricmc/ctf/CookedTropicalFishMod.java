@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
@@ -108,6 +109,5 @@ public class CookedTropicalFishMod implements ModInitializer {
 
 		Registry.register(Registry.BLOCK, new Identifier("ctf", "glow_berry_block"), GLOW_BERRY_BLOCK);
 		Registry.register(Registry.ITEM, new Identifier("ctf", "glow_berry_block"), new BlockItem(GLOW_BERRY_BLOCK, new FabricItemSettings().group(ItemGroup.REDSTONE)));
-		BlockRenderLayerMap.INSTANCE.putBlock(GLOW_BERRY_BLOCK, RenderLayer.getTranslucent());
 	}
 }
