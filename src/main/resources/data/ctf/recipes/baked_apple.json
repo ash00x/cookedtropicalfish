@@ -3,7 +3,7 @@
     "ingredient": {
         "item": "minecraft:apple"
     },
-    "result": "minecraft:stone",
+    "result": "ctf:baked_apple",
     "experience": 0.1,
     "cookingtime": 200
 }
